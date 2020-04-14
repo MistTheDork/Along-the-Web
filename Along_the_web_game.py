@@ -29,12 +29,12 @@ class Player:
             self.dy *= -1
 
 
-class game():
-    def __abs__(self):
+class Game:
+    def __init__(self):
         pygame.init()
 
         self.screen = pygame.display.set_mode(resolution)
-        self.__class__ = pygame.time.Clock()
+        self.clock = pygame.time.Clock()
         self.gameObjects = []
         self.gameObjects.append(Player())
         self.gameObjects.append(Player(100))
@@ -57,4 +57,4 @@ class game():
             pygame.display.flip()
 
 
-game().run()
+Game().run()
